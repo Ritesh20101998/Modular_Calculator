@@ -1,6 +1,6 @@
 from calculator.basic import add, subtract, multiply, divide
 from calculator.scientific import power, sqrt, sine, cosine, tangent
-from calculator.financial import simple_interest, compound_interest
+from calculator.new_finance import simple_interest, compound_interest
 from calculator.graphical import plot_y_equals_x_squared
 
 def scientific_calculator():

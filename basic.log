@@ -1,0 +1,8 @@
+2025-06-25 20:02:05,528 INFO generated new fontManager
+2025-06-25 20:02:15,540 INFO add | args=(400.0, 400.0), kwargs={} | result=800.0
+2025-06-25 20:02:27,756 INFO divide | args=(500.0, 1000.0), kwargs={} | result=0.5
+2025-06-25 20:02:42,644 INFO power | x=4.0, y=5.0 | result=1024.0
+2025-06-25 20:03:00,187 INFO cosine | x=45.0 | result=0.7071067811865476
+2025-06-25 20:03:24,502 INFO compound_interest | p=1000000.0, r=12.0, t=4.0, n=2.0 | result=593848.0745308422
+2025-06-25 20:03:45,030 INFO compound_interest | p=3000000.0, r=32.0, t=12.0, n=3.0 | result=112272867.88705736
+2025-06-25 20:04:21,431 INFO plot_y_equals_x_squared | success
