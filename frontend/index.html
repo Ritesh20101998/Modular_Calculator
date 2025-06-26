@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Modular Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Python Modular Calculator</h1>
+    <div class="section">
+        <h2>Basic Calculator</h2>
+        <form id="basicForm">
+            <label>Operation:
+                <select id="basicOp">
+                    <option value="add">Add</option>
+                    <option value="subtract">Subtract</option>
+                    <option value="multiply">Multiply</option>
+                    <option value="divide">Divide</option>
+                </select>
+            </label>
+            <label>First Number: <input type="number" id="basicX" required></label>
+            <label>Second Number: <input type="number" id="basicY" required></label>
+            <button type="submit">Calculate</button>
+        </form>
+        <div class="result" id="basicResult"></div>
+    </div>
+    <div class="section">
+        <h2>Graphical Calculator (y = x²)</h2>
+        <button id="plotBtn">Show Plot</button>
+        <div id="plotResult"></div>
+    </div>
+    <div class="section">
+        <h2>Advanced Graphical Calculator</h2>
+        <form id="advGraphForm">
+            <label>Formula (use x, e.g., <code>np.sin(x) + x**2</code>):
+                <input type="text" id="formula" value="np.sin(x) + x**2" required>
+            </label>
+            <button type="submit">Plot Formula</button>
+        </form>
+        <div id="advPlotResult"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

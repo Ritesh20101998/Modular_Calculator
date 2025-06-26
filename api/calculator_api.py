@@ -2,7 +2,9 @@ from flask import Flask, request, jsonify, send_file
 import io
 import matplotlib.pyplot as plt
 import numpy as np
-from calculator import basic, scientific, financial
+from calculator import financial
+from calculator import basic
+from calculator import scientific
 import math
 
 # Initialize Flask app
