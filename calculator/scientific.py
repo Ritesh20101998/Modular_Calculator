@@ -7,17 +7,22 @@ logging.basicConfig(
 import math
 
 def power(x, y):
-    """Return x raised to the power y."""
+    if not (isinstance(x, (int, float)) and isinstance(y, (int, float))):
+        raise ValueError("Both arguments must be numbers.")
     try:
         result = math.pow(x, y)
-        logging.info(f"power | x={x}, y={y} | result={result}")
+        if result == float('inf') or result == float('-inf'):
+            return float('inf')
         return result
     except Exception as e:
         logging.exception(f"power | x={x}, y={y} | error={e}")
         raise
 
 def sqrt(x):
-    """Return the square root of x."""
+    if not isinstance(x, (int, float)):
+        raise ValueError("Argument must be a number.")
+    if x < 0:
+        raise ValueError("Cannot take sqrt of negative number.")
     try:
         result = math.sqrt(x)
         logging.info(f"sqrt | x={x} | result={result}")
@@ -26,8 +31,36 @@ def sqrt(x):
         logging.exception(f"sqrt | x={x} | error={e}")
         raise
 
+def log(x, base=None):
+    if not isinstance(x, (int, float)):
+        raise ValueError("Argument must be a number.")
+    if x <= 0:
+        raise ValueError("Logarithm undefined for non-positive values.")
+    try:
+        if base is not None:
+            result = math.log(x, base)
+        else:
+            result = math.log(x)
+        logging.info(f"log | x={x}, base={base} | result={result}")
+        return result
+    except Exception as e:
+        logging.exception(f"log | x={x}, base={base} | error={e}")
+        raise
+
+def exp(x):
+    if not isinstance(x, (int, float)):
+        raise ValueError("Argument must be a number.")
+    try:
+        result = math.exp(x)
+        logging.info(f"exp | x={x} | result={result}")
+        return result
+    except Exception as e:
+        logging.exception(f"exp | x={x} | error={e}")
+        raise
+
 def sine(x):
-    """Return the sine of x degrees."""
+    if not isinstance(x, (int, float)):
+        raise ValueError("Argument must be a number.")
     try:
         result = math.sin(math.radians(x))
         logging.info(f"sine | x={x} | result={result}")
@@ -37,7 +70,8 @@ def sine(x):
         raise
 
 def cosine(x):
-    """Return the cosine of x degrees."""
+    if not isinstance(x, (int, float)):
+        raise ValueError("Argument must be a number.")
     try:
         result = math.cos(math.radians(x))
         logging.info(f"cosine | x={x} | result={result}")
@@ -47,33 +81,12 @@ def cosine(x):
         raise
 
 def tangent(x):
-    """Return the tangent of x degrees."""
+    if not isinstance(x, (int, float)):
+        raise ValueError("Argument must be a number.")
     try:
         result = math.tan(math.radians(x))
         logging.info(f"tangent | x={x} | result={result}")
         return result
     except Exception as e:
         logging.exception(f"tangent | x={x} | error={e}")
-        raise
-
-def log_value(x):
-    """Return the natural logarithm of x."""
-    try:
-        import math
-        result = math.log(x)
-        logging.info(f"log | x={x} | result={result}")
-        return result
-    except Exception as e:
-        logging.exception(f"log | x={x} | error={e}")
-        raise
-
-def exp_value(x):
-    """Return the exponential of x (e^x)."""
-    try:
-        import math
-        result = math.exp(x)
-        logging.info(f"exp | x={x} | result={result}")
-        return result
-    except Exception as e:
-        logging.exception(f"exp | x={x} | error={e}")
         raise

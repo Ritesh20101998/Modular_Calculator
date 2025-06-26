@@ -3,6 +3,7 @@ import io
 import matplotlib.pyplot as plt
 import numpy as np
 from calculator import basic, scientific, financial
+import math
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -67,12 +68,13 @@ def calculate_scientific():
         result = scientific.cosine(x)
     elif op == 'tangent':
         result = scientific.tangent(x)
-    # Advanced features
     elif op == 'log':
-        import math
-        result = math.log(x)
+        base = data.get('base')
+        if base:
+            result = math.log(x, base)
+        else:
+            result = math.log(x)
     elif op == 'exp':
-        import math
         result = math.exp(x)
     else:
         return jsonify({'error': 'Invalid operation'}), 400

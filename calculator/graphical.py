@@ -23,20 +23,26 @@ except ImportError:
     raise
 
 def plot_y_equals_x_squared():
-    """Plot the function y = x^2 and display the graph."""
+    """Plot the function y = x^2 and return the image as BytesIO."""
+    import io
     try:
         x = np.linspace(-10, 10, 400)
         y = x ** 2
-        plt.plot(x, y)
-        plt.title('y = x^2')
-        plt.xlabel('x')
-        plt.ylabel('y')
-        plt.grid(True)
-        plt.show()
+        fig, ax = plt.subplots()
+        ax.plot(x, y)
+        ax.set_title('y = x^2')
+        ax.set_xlabel('x')
+        ax.set_ylabel('y')
+        ax.grid(True)
+        buf = io.BytesIO()
+        fig.savefig(buf, format='png')
+        plt.close(fig)
+        buf.seek(0)
         logging.info("plot_y_equals_x_squared | success")
+        return buf
     except Exception as e:
         logging.exception(f"plot_y_equals_x_squared | error={e}")
-        print(f"Error: {e}")
+        raise
 
 def plot_multiple_functions(functions, labels=None, x_range=(-10, 10), num_points=400, title='Multiple Functions'):
     """

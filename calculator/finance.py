@@ -185,3 +185,6 @@ def emi_amortization_to_excel(principal, annual_rate, tenure_months, filepath):
     except Exception as e:
         logging.exception(f"emi_amortization_to_excel | error: {e}")
         raise
+
+# Alias for compatibility with tests and API
+finance = __import__(__name__)

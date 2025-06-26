@@ -3,7 +3,7 @@ import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'modular_calculator')))
 
 import unittest
-from calculator.basic import basic
+from calculator import basic
 
 class TestBasicCalculator(unittest.TestCase):
     def test_add(self):
