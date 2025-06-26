@@ -6,3 +6,10 @@
 2025-06-25 20:03:24,502 INFO compound_interest | p=1000000.0, r=12.0, t=4.0, n=2.0 | result=593848.0745308422
 2025-06-25 20:03:45,030 INFO compound_interest | p=3000000.0, r=32.0, t=12.0, n=3.0 | result=112272867.88705736
 2025-06-25 20:04:21,431 INFO plot_y_equals_x_squared | success
+2025-06-26 15:33:38,648 ERROR plot_multiple_functions | error=name 'np' is not defined
+Traceback (most recent call last):
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\graphical.py", line 55, in plot_multiple_functions
+    y = func(x)
+  File "<string>", line 1, in <lambda>
+NameError: name 'np' is not defined
+2025-06-26 15:36:33,856 INFO plot_multiple_functions | success | functions=3

@@ -100,3 +100,88 @@ def save_financial_record(db_path, table, record):
     except Exception as e:
         logging.exception(f"save_financial_record | db_path={db_path}, table={table}, record={record} | error={e}")
         raise
+
+def emi_calculator(principal, annual_rate, tenure_months):
+    """
+    Calculate EMI, total payment, and total interest for a loan.
+    Args:
+        principal: Loan amount (P)
+        annual_rate: Annual interest rate in percent (R)
+        tenure_months: Tenure in months (N)
+    Returns:
+        dict with EMI, total_payment, total_interest
+    """
+    try:
+        if principal <= 0 or annual_rate < 0 or tenure_months <= 0:
+            raise ValueError("Principal, rate, and tenure must be positive.")
+        monthly_rate = annual_rate / (12 * 100)
+        n = tenure_months
+        if monthly_rate == 0:
+            emi = principal / n
+        else:
+            emi = principal * monthly_rate * (1 + monthly_rate) ** n / ((1 + monthly_rate) ** n - 1)
+        total_payment = emi * n
+        total_interest = total_payment - principal
+        result = {
+            'EMI': round(emi, 2),
+            'Total Payment': round(total_payment, 2),
+            'Total Interest': round(total_interest, 2)
+        }
+        logging.info(f"emi_calculator | principal={principal}, annual_rate={annual_rate}, tenure_months={tenure_months} | result={result}")
+        return result
+    except Exception as e:
+        logging.exception(f"emi_calculator | principal={principal}, annual_rate={annual_rate}, tenure_months={tenure_months} | error={e}")
+        raise
+
+def emi_amortization_schedule(principal, annual_rate, tenure_months):
+    """
+    Generate an EMI amortization schedule as a list of dicts.
+    Each entry contains: month, EMI, principal_paid, interest_paid, remaining_principal
+    """
+    try:
+        schedule = []
+        monthly_rate = annual_rate / (12 * 100)
+        n = tenure_months
+        if monthly_rate == 0:
+            emi = principal / n
+        else:
+            emi = principal * monthly_rate * (1 + monthly_rate) ** n / ((1 + monthly_rate) ** n - 1)
+        remaining = principal
+        for month in range(1, n + 1):
+            interest = remaining * monthly_rate
+            principal_paid = emi - interest
+            remaining -= principal_paid
+            if remaining < 0:  # Avoid negative due to float rounding
+                principal_paid += remaining
+                remaining = 0
+            schedule.append({
+                'Month': month,
+                'EMI': round(emi, 2),
+                'Principal Paid': round(principal_paid, 2),
+                'Interest Paid': round(interest, 2),
+                'Remaining Principal': round(remaining, 2)
+            })
+        logging.info(f"emi_amortization_schedule | principal={principal}, annual_rate={annual_rate}, tenure_months={tenure_months} | schedule_generated")
+        return schedule
+    except Exception as e:
+        logging.exception(f"emi_amortization_schedule | principal={principal}, annual_rate={annual_rate}, tenure_months={tenure_months} | error={e}")
+        raise
+
+def emi_amortization_to_excel(principal, annual_rate, tenure_months, filepath):
+    """
+    Generate EMI amortization schedule and save as an Excel file.
+    Args:
+        principal: Loan amount
+        annual_rate: Annual interest rate in percent
+        tenure_months: Tenure in months
+        filepath: Path to save the Excel file
+    """
+    try:
+        schedule = emi_amortization_schedule(principal, annual_rate, tenure_months)
+        df = pd.DataFrame(schedule)
+        df.to_excel(filepath, index=False)
+        logging.info(f"emi_amortization_to_excel | file saved: {filepath}")
+        return filepath
+    except Exception as e:
+        logging.exception(f"emi_amortization_to_excel | error: {e}")
+        raise
