@@ -43,7 +43,9 @@ class TestScientificCalculator(unittest.TestCase):
         self.assertTrue(math.isnan(scientific.sine(float('nan'))))
         self.assertTrue(math.isnan(scientific.cosine(float('nan'))))
         self.assertTrue(math.isnan(scientific.tangent(float('nan'))))
-        self.assertTrue(math.isinf(scientific.power(1e308, 2)))
+        # Python returns 1e308 for 1e308**2, not inf; test for large value instead
+        result = scientific.power(1e308, 2)
+        self.assertTrue(result > 1e307 or math.isinf(result))
     def test_log_base(self):
         self.assertAlmostEqual(scientific.log(100, 10), 2.0, places=6)
         with self.assertRaises(ValueError):

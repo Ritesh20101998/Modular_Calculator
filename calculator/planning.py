@@ -65,11 +65,14 @@ def nper(pv, pmt, rate):
 def rate(pv, pmt, n):
     """
     Approximate Interest Rate (I/Y) given PV, PMT, and N (using Newton's method).
+    Uses the standard annuity formula: PV = PMT * (1 - (1 + r) ** -n) / r
     """
     guess = 0.05
     for _ in range(100):
-        f = pv * math.pow(1 + guess, n) + pmt * (math.pow(1 + guess, n) - 1) / guess
-        df = pv * n * math.pow(1 + guess, n - 1) - pmt * (math.pow(1 + guess, n) - 1) / (guess ** 2) + pmt * n * math.pow(1 + guess, n - 1) / guess
+        # Standard annuity present value formula
+        f = pv + pmt * (1 - math.pow(1 + guess, -n)) / guess
+        # Derivative with respect to r
+        df = pmt * ( (1 - math.pow(1 + guess, -n)) / (guess ** 2) + (n * math.pow(1 + guess, -n - 1)) / guess )
         new_guess = guess - f / df
         if abs(new_guess - guess) < 1e-6:
             return new_guess
