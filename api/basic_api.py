@@ -9,6 +9,15 @@ def calculate_basic():
     op = data.get('operation')
     x = data.get('x')
     y = data.get('y')
+    # Validate input
+    if op is None:
+        return jsonify({'error': 'Missing operation.'}), 400
+    if op == 'abs':
+        if x is None or not isinstance(x, (int, float)):
+            return jsonify({'error': 'x must be a number for abs.'}), 400
+    else:
+        if x is None or y is None or not isinstance(x, (int, float)) or not isinstance(y, (int, float)):
+            return jsonify({'error': 'x and y must be numbers.'}), 400
     if op == 'add':
         result = basic.add(x, y)
     elif op == 'subtract':

@@ -9,6 +9,8 @@ app = Flask(__name__)
 def calculate_graphical():
     data = request.json
     op = data.get('operation')
+    if not op or not isinstance(op, str):
+        return jsonify({'error': 'Missing or invalid operation.'}), 400
     if op == 'plot_y_equals_x_squared':
         try:
             x = np.linspace(-10, 10, 400)

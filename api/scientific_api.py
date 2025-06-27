@@ -10,6 +10,15 @@ def calculate_scientific():
     op = data.get('operation')
     x = data.get('x')
     y = data.get('y')
+    base = data.get('base')
+    if op is None:
+        return jsonify({'error': 'Missing operation.'}), 400
+    if op in ['power']:
+        if x is None or y is None or not isinstance(x, (int, float)) or not isinstance(y, (int, float)):
+            return jsonify({'error': 'x and y must be numbers.'}), 400
+    elif op in ['sqrt', 'sine', 'cosine', 'tangent', 'log', 'exp']:
+        if x is None or not isinstance(x, (int, float)):
+            return jsonify({'error': 'x must be a number.'}), 400
     if op == 'power':
         result = scientific.power(x, y)
     elif op == 'sqrt':
@@ -21,7 +30,12 @@ def calculate_scientific():
     elif op == 'tangent':
         result = scientific.tangent(x)
     elif op == 'log':
-        result = math.log(x)
+        if base is not None:
+            if not isinstance(base, (int, float)):
+                return jsonify({'error': 'base must be a number.'}), 400
+            result = math.log(x, base)
+        else:
+            result = math.log(x)
     elif op == 'exp':
         result = math.exp(x)
     else:
