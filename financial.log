@@ -1,0 +1,129 @@
+2025-06-28 18:14:06,559 INFO add | args=(2, 3), kwargs={} | result=5
+2025-06-28 18:14:06,559 INFO add | args=(-1, 1), kwargs={} | result=0
+2025-06-28 18:14:06,559 INFO add | args=(1e+308, 1e+308), kwargs={} | result=inf
+2025-06-28 18:14:06,559 INFO divide | args=(6, 3), kwargs={} | result=2.0
+2025-06-28 18:14:06,559 INFO divide | args=(5, 2), kwargs={} | result=2.5
+2025-06-28 18:14:06,559 WARNING divide | x=5, y=0 | error=Division by zero
+2025-06-28 18:14:06,559 INFO divide | args=(5, 0), kwargs={} | result=Error: Division by zero!
+2025-06-28 18:14:06,559 INFO floor_divide | args=(10, 3), kwargs={} | result=3
+2025-06-28 18:14:06,559 WARNING floor_divide | x=10, y=0 | error=Division by zero
+2025-06-28 18:14:06,559 INFO floor_divide | args=(10, 0), kwargs={} | result=Error: Division by zero!
+2025-06-28 18:14:06,559 INFO modulus | args=(10, 3), kwargs={} | result=1
+2025-06-28 18:14:06,559 WARNING modulus | x=10, y=0 | error=Division by zero
+2025-06-28 18:14:06,559 INFO modulus | args=(10, 0), kwargs={} | result=Error: Division by zero!
+2025-06-28 18:14:06,559 INFO multiply | args=(2, 3), kwargs={} | result=6
+2025-06-28 18:14:06,559 INFO multiply | args=(-1, 1), kwargs={} | result=-1
+2025-06-28 18:14:06,559 INFO multiply | args=(1e+154, 1e+154), kwargs={} | result=1e+308
+2025-06-28 18:14:06,559 INFO power | args=(2, 10), kwargs={} | result=1024
+2025-06-28 18:14:06,559 INFO power | args=(1e+154, 2), kwargs={} | result=1e+308
+2025-06-28 18:14:06,559 INFO subtract | args=(5, 3), kwargs={} | result=2
+2025-06-28 18:14:06,559 INFO subtract | args=(0, 1), kwargs={} | result=-1
+2025-06-28 18:14:06,559 ERROR add | args=('a', 1), kwargs={} | error=Both arguments must be numbers.
+Traceback (most recent call last):
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\basic.py", line 15, in wrapper
+    result = func(*args, **kwargs)
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\basic.py", line 27, in add
+    raise TypeError("Both arguments must be numbers.")
+TypeError: Both arguments must be numbers.
+2025-06-28 18:14:06,575 ERROR subtract | args=(1, 'b'), kwargs={} | error=Both arguments must be numbers.
+Traceback (most recent call last):
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\basic.py", line 15, in wrapper
+    result = func(*args, **kwargs)
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\basic.py", line 34, in subtract
+    raise TypeError("Both arguments must be numbers.")
+TypeError: Both arguments must be numbers.
+2025-06-28 18:14:06,575 ERROR multiply | args=('x', 'y'), kwargs={} | error=Both arguments must be numbers.
+Traceback (most recent call last):
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\basic.py", line 15, in wrapper
+    result = func(*args, **kwargs)
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\basic.py", line 41, in multiply
+    raise TypeError("Both arguments must be numbers.")
+TypeError: Both arguments must be numbers.
+2025-06-28 18:14:06,575 ERROR divide | args=('x', 2), kwargs={} | error=unsupported operand type(s) for /: 'str' and 'int'
+Traceback (most recent call last):
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\basic.py", line 15, in wrapper
+    result = func(*args, **kwargs)
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\basic.py", line 53, in divide
+    return x / y
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+2025-06-28 18:14:06,575 ERROR modulus | args=(1, 'z'), kwargs={} | error=Both arguments must be numbers.
+Traceback (most recent call last):
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\basic.py", line 15, in wrapper
+    result = func(*args, **kwargs)
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\basic.py", line 59, in modulus
+    raise TypeError("Both arguments must be numbers.")
+TypeError: Both arguments must be numbers.
+2025-06-28 18:14:06,575 ERROR floor_divide | args=('foo', 1), kwargs={} | error=Both arguments must be numbers.
+Traceback (most recent call last):
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\basic.py", line 15, in wrapper
+    result = func(*args, **kwargs)
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\basic.py", line 69, in floor_divide
+    raise TypeError("Both arguments must be numbers.")
+TypeError: Both arguments must be numbers.
+2025-06-28 18:14:06,575 ERROR power | args=('bar', 2), kwargs={} | error=Both arguments must be numbers.
+Traceback (most recent call last):
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\basic.py", line 15, in wrapper
+    result = func(*args, **kwargs)
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\basic.py", line 79, in power
+    raise TypeError("Both arguments must be numbers.")
+TypeError: Both arguments must be numbers.
+2025-06-28 18:14:06,575 INFO add | args=(0, 0), kwargs={} | result=0
+2025-06-28 18:14:06,575 INFO subtract | args=(-5, -5), kwargs={} | result=0
+2025-06-28 18:14:06,575 INFO multiply | args=(0, 100), kwargs={} | result=0
+2025-06-28 18:14:06,575 INFO divide | args=(0, 1), kwargs={} | result=0.0
+2025-06-28 18:14:06,575 INFO divide | args=(-10, 2), kwargs={} | result=-5.0
+2025-06-28 18:14:06,575 INFO modulus | args=(-10, 3), kwargs={} | result=2
+2025-06-28 18:14:06,575 INFO floor_divide | args=(-10, 3), kwargs={} | result=-4
+2025-06-28 18:14:06,575 INFO power | args=(-2, 3), kwargs={} | result=-8
+2025-06-28 18:14:06,575 INFO compound_interest | p=1000, r=10, t=2, n=1 | result=210.00000000000023
+2025-06-28 18:14:06,575 INFO compound_interest | p=500, r=5, t=3, n=2 | result=79.84670910644502
+2025-06-28 18:14:06,575 INFO compound_interest | p=1000, r=5, t=10, n=365 | result=648.6648137652346
+2025-06-28 18:14:06,575 INFO format_currency | value=1234.567, currency=USD | result=USD 1,234.57
+2025-06-28 18:14:06,575 INFO format_currency | value=1000, currency=INR | result=INR 1,000.00
+2025-06-28 18:14:06,622 INFO read_financial_data_csv | filepath=test.csv | records_count=2
+2025-06-28 18:14:08,248 INFO read_financial_data_excel | filepath=test.xlsx | records_count=2
+2025-06-28 18:14:08,249 INFO risk_return_analysis | returns=[0.1, 0.2, 0.15, 0.18] | result={'mean_return': 0.1575, 'stddev': 0.0377}
+2025-06-28 18:14:08,261 INFO save_financial_record | db_path=test_finance.db, table=test, record={'a': 1, 'b': 2}
+2025-06-28 18:14:08,262 INFO simple_interest | p=1000, r=5, t=2 | result=100.0
+2025-06-28 18:14:08,263 INFO simple_interest | p=2000, r=3, t=1 | result=60.0
+2025-06-28 18:14:08,492 INFO plot_y_equals_x_squared | success
+2025-06-28 18:14:08,711 INFO plot_y_equals_x_squared | success
+2025-06-28 18:14:08,711 ERROR plot_y_equals_x_squared | error=Test error
+Traceback (most recent call last):
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\graphical.py", line 29, in plot_y_equals_x_squared
+    x = np.linspace(-10, 10, 400)
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_graphical.py", line 28, in <lambda>
+    np.linspace = lambda *a, **k: (_ for _ in ()).throw(ValueError('Test error'))
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_graphical.py", line 28, in <genexpr>
+    np.linspace = lambda *a, **k: (_ for _ in ()).throw(ValueError('Test error'))
+ValueError: Test error
+2025-06-28 18:14:08,869 INFO plot_y_equals_x_squared | success
+2025-06-28 18:14:08,979 INFO plot_y_equals_x_squared | success
+2025-06-28 18:14:08,979 INFO cosine | x=0 | result=1.0
+2025-06-28 18:14:08,979 INFO cosine | x=180 | result=-1.0
+2025-06-28 18:14:08,979 INFO sqrt | x=1e-10 | result=1e-05
+2025-06-28 18:14:08,979 INFO exp | x=0 | result=1.0
+2025-06-28 18:14:08,979 INFO log | x=1, base=None | result=0.0
+2025-06-28 18:14:08,979 INFO log | x=100, base=10 | result=2.0
+2025-06-28 18:14:08,979 INFO log | x=10, base=None | result=2.302585092994046
+2025-06-28 18:14:08,979 INFO log | x=1, base=None | result=0.0
+2025-06-28 18:14:08,979 INFO exp | x=2 | result=7.38905609893065
+2025-06-28 18:14:08,979 INFO exp | x=0 | result=1.0
+2025-06-28 18:14:08,979 INFO sine | x=nan | result=nan
+2025-06-28 18:14:08,979 INFO cosine | x=nan | result=nan
+2025-06-28 18:14:08,979 INFO tangent | x=nan | result=nan
+2025-06-28 18:14:08,979 ERROR power | x=1e+308, y=2 | error=math range error
+Traceback (most recent call last):
+  File "D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\scientific.py", line 13, in power
+    result = math.pow(x, y)
+OverflowError: math range error
+2025-06-28 18:14:08,979 INFO sine | x=90 | result=1.0
+2025-06-28 18:14:08,979 INFO sine | x=0 | result=0.0
+2025-06-28 18:14:08,995 INFO sqrt | x=9 | result=3.0
+2025-06-28 18:14:08,995 INFO sqrt | x=16 | result=4.0
+2025-06-28 18:14:08,995 INFO sqrt | x=1e-10 | result=1e-05
+2025-06-28 18:14:08,995 INFO tangent | x=45 | result=0.9999999999999999
+2025-06-28 18:14:08,995 INFO tangent | x=0 | result=0.0
+2025-06-28 18:14:08,995 INFO sine | x=0 | result=0.0
+2025-06-28 18:14:08,995 INFO cosine | x=180 | result=-1.0
+2025-06-28 18:14:08,995 INFO tangent | x=0 | result=0.0

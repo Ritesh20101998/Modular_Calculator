@@ -1,22 +1,33 @@
 import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'modular_calculator')))
-
 import unittest
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'modular_calculator')))
 from calculator import basic
 
 class TestBasicCalculator(unittest.TestCase):
     def test_add(self):
-        self.assertEqual(basic.add(2, 3), 5)
-        self.assertEqual(basic.add(-1, 1), 0)
-        self.assertEqual(basic.add(1e308, 1e308), float('inf'))
+        for x, y, expected in [
+            (2, 3, 5),
+            (-1, 1, 0),
+            (1e308, 1e308, float('inf'))
+        ]:
+            with self.subTest(x=x, y=y, expected=expected):
+                self.assertEqual(basic.add(x, y), expected)
     def test_subtract(self):
-        self.assertEqual(basic.subtract(5, 3), 2)
-        self.assertEqual(basic.subtract(0, 1), -1)
+        for x, y, expected in [
+            (5, 3, 2),
+            (0, 1, -1)
+        ]:
+            with self.subTest(x=x, y=y, expected=expected):
+                self.assertEqual(basic.subtract(x, y), expected)
     def test_multiply(self):
-        self.assertEqual(basic.multiply(2, 3), 6)
-        self.assertEqual(basic.multiply(-1, 1), -1)
-        self.assertEqual(basic.multiply(1e154, 1e154), 1e308)  # Python result is 1e308, not inf
+        for x, y, expected in [
+            (2, 3, 6),
+            (-1, 1, -1),
+            (1e154, 1e154, 1e308)
+        ]:
+            with self.subTest(x=x, y=y, expected=expected):
+                self.assertEqual(basic.multiply(x, y), expected)
     def test_divide(self):
         self.assertEqual(basic.divide(6, 3), 2)
         self.assertEqual(basic.divide(5, 2), 2.5)
@@ -29,7 +40,7 @@ class TestBasicCalculator(unittest.TestCase):
         self.assertEqual(basic.floor_divide(10, 0), "Error: Division by zero!")
     def test_power(self):
         self.assertEqual(basic.power(2, 10), 1024)
-        self.assertEqual(basic.power(1e154, 2), 1e308)  # Python result is 1e308, not inf
+        self.assertEqual(basic.power(1e154, 2), 1e308)
     def test_max_min_abs(self):
         self.assertEqual(max(10, -5), 10)
         self.assertEqual(min(10, -5), -5)

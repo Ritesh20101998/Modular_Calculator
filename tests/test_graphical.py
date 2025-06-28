@@ -1,7 +1,5 @@
 import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'modular_calculator')))
-
 import unittest
 from calculator import graphical
 import io
@@ -9,13 +7,14 @@ import numpy as np
 
 class TestGraphicalCalculator(unittest.TestCase):
     def test_plot_y_equals_x_squared(self):
-        # Should not raise exception
-        try:
-            graphical.plot_y_equals_x_squared()
-            passed = True
-        except Exception:
-            passed = False
-        self.assertTrue(passed)
+        for _ in range(2):  # Run twice to check for state issues
+            with self.subTest(run=_):
+                try:
+                    graphical.plot_y_equals_x_squared()
+                    passed = True
+                except Exception:
+                    passed = False
+                self.assertTrue(passed)
     def test_plot_y_equals_x_squared_image(self):
         img = graphical.plot_y_equals_x_squared()
         self.assertIsNotNone(img)

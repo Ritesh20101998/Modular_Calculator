@@ -1,0 +1,52 @@
+Test Name,Status,Elapsed,Type
+test_add (tests.test_basic.TestBasicCalculator),PASS,,unit
+test_divide (tests.test_basic.TestBasicCalculator),PASS,,unit
+test_floor_divide (tests.test_basic.TestBasicCalculator),PASS,,unit
+test_max_min_abs (tests.test_basic.TestBasicCalculator),PASS,,unit
+test_modulus (tests.test_basic.TestBasicCalculator),PASS,,unit
+test_multiply (tests.test_basic.TestBasicCalculator),PASS,,unit
+test_power (tests.test_basic.TestBasicCalculator),PASS,,unit
+test_subtract (tests.test_basic.TestBasicCalculator),PASS,,unit
+test_type_errors (tests.test_basic.TestBasicCalculator),PASS,,unit
+test_zero_and_negative_inputs (tests.test_basic.TestBasicCalculator),PASS,,unit
+test_financial (unittest.loader._FailedTest),ERROR,,unit
+test_plot_y_equals_x_squared (tests.test_graphical.TestGraphicalCalculator),PASS,,unit
+test_plot_y_equals_x_squared_exception (tests.test_graphical.TestGraphicalCalculator),PASS,,unit
+test_plot_y_equals_x_squared_image (tests.test_graphical.TestGraphicalCalculator),PASS,,unit
+test_plot_y_equals_x_squared_type (tests.test_graphical.TestGraphicalCalculator),PASS,,unit
+test_fv (tests.test_planning.TestPlanningCalculators),PASS,,unit
+test_lumpsum_calculator (tests.test_planning.TestPlanningCalculators),PASS,,unit
+test_nper (tests.test_planning.TestPlanningCalculators),PASS,,unit
+test_pmt (tests.test_planning.TestPlanningCalculators),PASS,,unit
+test_pv (tests.test_planning.TestPlanningCalculators),PASS,,unit
+test_rate (tests.test_planning.TestPlanningCalculators),FAIL,,unit
+test_sip_calculator (tests.test_planning.TestPlanningCalculators),PASS,,unit
+test_cosine (tests.test_scientific.TestScientificCalculator),PASS,,unit
+test_invalid_inputs (tests.test_scientific.TestScientificCalculator),PASS,,unit
+test_large_and_small_numbers (tests.test_scientific.TestScientificCalculator),PASS,,unit
+test_log_base (tests.test_scientific.TestScientificCalculator),PASS,,unit
+test_log_exp (tests.test_scientific.TestScientificCalculator),PASS,,unit
+test_nan_and_inf (tests.test_scientific.TestScientificCalculator),ERROR,,unit
+test_power (tests.test_scientific.TestScientificCalculator),PASS,,unit
+test_sine (tests.test_scientific.TestScientificCalculator),PASS,,unit
+test_sqrt (tests.test_scientific.TestScientificCalculator),PASS,,unit
+test_tangent (tests.test_scientific.TestScientificCalculator),PASS,,unit
+test_trig_edge_cases (tests.test_scientific.TestScientificCalculator),PASS,,unit
+test_basic_add (tests.test_api.TestCalculatorAPI),ERROR,,unit
+test_basic_invalid (tests.test_api.TestCalculatorAPI),ERROR,,unit
+test_financial_simple_interest (tests.test_api.TestCalculatorAPI),ERROR,,unit
+test_graphical_advanced_formula_safe (tests.test_api.TestCalculatorAPI),ERROR,,unit
+test_graphical_advanced_formula_unsafe (tests.test_api.TestCalculatorAPI),ERROR,,unit
+test_planning_rate (tests.test_api.TestCalculatorAPI),ERROR,,unit
+test_planning_sip (tests.test_api.TestCalculatorAPI),ERROR,,unit
+test_scientific_power (tests.test_api.TestCalculatorAPI),ERROR,,unit
+test_test_results_pie_chart (tests.test_api.TestCalculatorAPI),ERROR,,unit
+API POST /calculate/basic,"ERROR: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AA498B1750>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",,api
+API POST /calculate/basic,"ERROR: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AA498B22C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",,api
+API POST /calculate/scientific,"ERROR: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/scientific (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AA498B19F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",,api
+API POST /calculate/finance,"ERROR: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/finance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AA46320490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",,api
+API POST /calculate/graphical/plot,"ERROR: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AA498B35E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",,api
+API POST /calculate/graphical/plot,"ERROR: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AA498B25F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",,api
+API POST /api/planning/sip,"ERROR: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/sip (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AA498B10C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",,api
+API POST /api/planning/rate,"ERROR: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/rate (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AA498B0670>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",,api
+API GET /test_results/pie_chart,"ERROR: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /test_results/pie_chart (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AA498B3550>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",,api
