@@ -1,3 +1,9 @@
+"""
+Scientific Calculator Module
+- Power, sqrt, log, trig functions
+- All functions type-checked, logged, and robust
+"""
+
 import logging
 logging.basicConfig(
     filename='scientific.log',
@@ -6,7 +12,8 @@ logging.basicConfig(
 )
 import math
 
-def power(x, y):
+def power(x: float, y: float) -> float:
+    """Return x raised to the power y."""
     if not (isinstance(x, (int, float)) and isinstance(y, (int, float))):
         raise ValueError("Both arguments must be numbers.")
     try:
@@ -18,7 +25,8 @@ def power(x, y):
         logging.exception(f"power | x={x}, y={y} | error={e}")
         raise
 
-def sqrt(x):
+def sqrt(x: float) -> float:
+    """Return the square root of x."""
     if not isinstance(x, (int, float)):
         raise ValueError("Argument must be a number.")
     if x < 0:
@@ -31,7 +39,8 @@ def sqrt(x):
         logging.exception(f"sqrt | x={x} | error={e}")
         raise
 
-def log(x, base=None):
+def log(x: float, base: float = None) -> float:
+    """Return the logarithm of x to the given base, or natural log if no base is specified."""
     if not isinstance(x, (int, float)):
         raise ValueError("Argument must be a number.")
     if x <= 0:
@@ -47,7 +56,8 @@ def log(x, base=None):
         logging.exception(f"log | x={x}, base={base} | error={e}")
         raise
 
-def exp(x):
+def exp(x: float) -> float:
+    """Return e raised to the power x."""
     if not isinstance(x, (int, float)):
         raise ValueError("Argument must be a number.")
     try:
@@ -58,7 +68,8 @@ def exp(x):
         logging.exception(f"exp | x={x} | error={e}")
         raise
 
-def sine(x):
+def sine(x: float) -> float:
+    """Return the sine of x (x expected in degrees)."""
     if not isinstance(x, (int, float)):
         raise ValueError("Argument must be a number.")
     try:
@@ -69,7 +80,8 @@ def sine(x):
         logging.exception(f"sine | x={x} | error={e}")
         raise
 
-def cosine(x):
+def cosine(x: float) -> float:
+    """Return the cosine of x (x expected in degrees)."""
     if not isinstance(x, (int, float)):
         raise ValueError("Argument must be a number.")
     try:
@@ -80,7 +92,8 @@ def cosine(x):
         logging.exception(f"cosine | x={x} | error={e}")
         raise
 
-def tangent(x):
+def tangent(x: float) -> float:
+    """Return the tangent of x (x expected in degrees)."""
     if not isinstance(x, (int, float)):
         raise ValueError("Argument must be a number.")
     try:

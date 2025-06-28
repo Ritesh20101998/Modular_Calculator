@@ -1,4 +1,8 @@
-# Financial Calculator Module
+"""
+Financial Calculator Module
+- Simple and compound interest, risk/return, currency formatting, data I/O
+- All functions type-checked, logged, and robust
+"""
 import os
 import math
 from typing import List, Dict, Any
@@ -13,7 +17,7 @@ logging.basicConfig(
     format='%(asctime)s %(levelname)s %(message)s'
 )
 
-def simple_interest(p, r, t):
+def simple_interest(p: float, r: float, t: float) -> float:
     """Calculate simple interest given principal, rate, and time."""
     try:
         result = p * r * t / 100
@@ -23,7 +27,7 @@ def simple_interest(p, r, t):
         logging.exception(f"simple_interest | p={p}, r={r}, t={t} | error={e}")
         raise
 
-def compound_interest(p, r, t, n):
+def compound_interest(p: float, r: float, t: float, n: int) -> float:
     """Calculate compound interest given principal, rate, time, and compounding frequency."""
     try:
         if n == 0:
@@ -35,22 +39,20 @@ def compound_interest(p, r, t, n):
         logging.exception(f"compound_interest | p={p}, r={r}, t={t}, n={n} | error={e}")
         raise
 
-def risk_return_analysis(returns):
+def risk_return_analysis(returns: List[float]) -> Dict[str, float]:
     """Calculate mean return and standard deviation for a list of returns."""
     try:
-        if not returns:
-            raise ValueError("Returns list cannot be empty.")
-        mean_return = float(sum(returns)) / len(returns)
-        variance = float(sum((r - mean_return) ** 2 for r in returns)) / len(returns)
-        stddev = variance ** 0.5
-        result = {'mean_return': round(mean_return, 4), 'stddev': round(stddev, 4)}
-        logging.info(f"risk_return_analysis | returns={returns} | result={result}")
-        return result
+        if not isinstance(returns, list) or not all(isinstance(x, (int, float)) for x in returns):
+            raise TypeError("Returns must be a list of numbers.")
+        mean_return = sum(returns) / len(returns)
+        stddev = (sum((x - mean_return) ** 2 for x in returns) / len(returns)) ** 0.5
+        logging.info(f"risk_return_analysis | returns={returns} | mean={mean_return}, stddev={stddev}")
+        return {'mean_return': mean_return, 'stddev': stddev}
     except Exception as e:
         logging.exception(f"risk_return_analysis | returns={returns} | error={e}")
         raise
 
-def format_currency(value, currency='USD'):
+def format_currency(value: float, currency: str = 'USD') -> str:
     """Format a value as currency with two decimal places."""
     try:
         formatted = f"{currency} {Decimal(value).quantize(Decimal('0.01'), rounding=ROUND_HALF_UP):,.2f}"
@@ -60,7 +62,7 @@ def format_currency(value, currency='USD'):
         logging.exception(f"format_currency | value={value}, currency={currency} | error={e}")
         raise
 
-def read_financial_data_csv(filepath):
+def read_financial_data_csv(filepath: str) -> List[Dict[str, Any]]:
     """Read financial data from a CSV file and return as a list of records."""
     try:
         if not os.path.exists(filepath):
@@ -73,7 +75,7 @@ def read_financial_data_csv(filepath):
         logging.exception(f"read_financial_data_csv | filepath={filepath} | error={e}")
         raise
 
-def read_financial_data_excel(filepath):
+def read_financial_data_excel(filepath: str) -> List[Dict[str, Any]]:
     """Read financial data from an Excel file and return as a list of records."""
     try:
         if not os.path.exists(filepath):
@@ -86,7 +88,7 @@ def read_financial_data_excel(filepath):
         logging.exception(f"read_financial_data_excel | filepath={filepath} | error={e}")
         raise
 
-def save_financial_record(db_path, table, record):
+def save_financial_record(db_path: str, table: str, record: Dict[str, Any]):
     """Save a financial record to a SQLite database table."""
     try:
         conn = sqlite3.connect(db_path)
@@ -101,7 +103,7 @@ def save_financial_record(db_path, table, record):
         logging.exception(f"save_financial_record | db_path={db_path}, table={table}, record={record} | error={e}")
         raise
 
-def emi_calculator(principal, annual_rate, tenure_months):
+def emi_calculator(principal: float, annual_rate: float, tenure_months: int) -> Dict[str, float]:
     """
     Calculate EMI, total payment, and total interest for a loan.
     Args:
@@ -133,7 +135,7 @@ def emi_calculator(principal, annual_rate, tenure_months):
         logging.exception(f"emi_calculator | principal={principal}, annual_rate={annual_rate}, tenure_months={tenure_months} | error={e}")
         raise
 
-def emi_amortization_schedule(principal, annual_rate, tenure_months):
+def emi_amortization_schedule(principal: float, annual_rate: float, tenure_months: int) -> List[Dict[str, float]]:
     """
     Generate an EMI amortization schedule as a list of dicts.
     Each entry contains: month, EMI, principal_paid, interest_paid, remaining_principal
@@ -167,7 +169,7 @@ def emi_amortization_schedule(principal, annual_rate, tenure_months):
         logging.exception(f"emi_amortization_schedule | principal={principal}, annual_rate={annual_rate}, tenure_months={tenure_months} | error={e}")
         raise
 
-def emi_amortization_to_excel(principal, annual_rate, tenure_months, filepath):
+def emi_amortization_to_excel(principal: float, annual_rate: float, tenure_months: int, filepath: str) -> str:
     """
     Generate EMI amortization schedule and save as an Excel file.
     Args:

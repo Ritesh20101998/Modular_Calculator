@@ -1,0 +1,623 @@
+Test Name,Status,Type,Details
+test_basic (unittest.loader._FailedTest),ERROR,unit,"ImportError: Failed to import test module: test_basic
+Traceback (most recent call last):
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\unittest\loader.py"", line 154, in loadTestsFromName
+    module = __import__(module_name)
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_basic.py"", line 5, in <module>
+    from calculator import basic
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\__init__.py"", line 2, in <module>
+    from . import financial
+ImportError: cannot import name 'financial' from partially initialized module 'calculator' (most likely due to a circular import) (D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\__init__.py)
+
+"
+test_financial (unittest.loader._FailedTest),ERROR,unit,"ImportError: Failed to import test module: test_financial
+Traceback (most recent call last):
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\unittest\loader.py"", line 154, in loadTestsFromName
+    module = __import__(module_name)
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_financial.py"", line 4, in <module>
+    from calculator import financial
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\__init__.py"", line 2, in <module>
+    from . import financial
+ImportError: cannot import name 'financial' from partially initialized module 'calculator' (most likely due to a circular import) (D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\__init__.py)
+
+"
+test_graphical (unittest.loader._FailedTest),ERROR,unit,"ImportError: Failed to import test module: test_graphical
+Traceback (most recent call last):
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\unittest\loader.py"", line 154, in loadTestsFromName
+    module = __import__(module_name)
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_graphical.py"", line 4, in <module>
+    from calculator import graphical
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\__init__.py"", line 2, in <module>
+    from . import financial
+ImportError: cannot import name 'financial' from partially initialized module 'calculator' (most likely due to a circular import) (D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\__init__.py)
+
+"
+test_planning (unittest.loader._FailedTest),ERROR,unit,"ImportError: Failed to import test module: test_planning
+Traceback (most recent call last):
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\unittest\loader.py"", line 154, in loadTestsFromName
+    module = __import__(module_name)
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_planning.py"", line 2, in <module>
+    from calculator.planning import sip_calculator, lumpsum_calculator, fv, pv, pmt, nper, rate
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\__init__.py"", line 2, in <module>
+    from . import financial
+ImportError: cannot import name 'financial' from partially initialized module 'calculator' (most likely due to a circular import) (D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\__init__.py)
+
+"
+test_scientific (unittest.loader._FailedTest),ERROR,unit,"ImportError: Failed to import test module: test_scientific
+Traceback (most recent call last):
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\unittest\loader.py"", line 154, in loadTestsFromName
+    module = __import__(module_name)
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_scientific.py"", line 6, in <module>
+    from calculator import scientific
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\__init__.py"", line 2, in <module>
+    from . import financial
+ImportError: cannot import name 'financial' from partially initialized module 'calculator' (most likely due to a circular import) (D:\Desktop\Simple Projects\Python\Modular_Calculator\calculator\__init__.py)
+
+"
+test_basic_add (tests.test_api.TestCalculatorAPI),ERROR,unit,"Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 174, in _new_conn
+    conn = connection.create_connection(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\connection.py"", line 95, in create_connection
+    raise err
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\connection.py"", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 715, in urlopen
+    httplib_response = self._make_request(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1037, in _send_output
+    self.send(msg)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 975, in send
+    self.connect()
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 205, in connect
+    conn = self._new_conn()
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001EE61A279A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\adapters.py"", line 667, in send
+    resp = conn.urlopen(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 799, in urlopen
+    retries = retries.increment(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\retry.py"", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A279A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_api.py"", line 9, in test_basic_add
+    r = requests.post(BASE + ""/calculate/basic"", json={""operation"": ""add"", ""x"": 2, ""y"": 3})
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\api.py"", line 115, in post
+    return request(""post"", url, data=data, json=json, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\api.py"", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\sessions.py"", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\sessions.py"", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\adapters.py"", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A279A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+"
+test_basic_invalid (tests.test_api.TestCalculatorAPI),ERROR,unit,"Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 174, in _new_conn
+    conn = connection.create_connection(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\connection.py"", line 95, in create_connection
+    raise err
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\connection.py"", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 715, in urlopen
+    httplib_response = self._make_request(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1037, in _send_output
+    self.send(msg)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 975, in send
+    self.connect()
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 205, in connect
+    conn = self._new_conn()
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001EE61A25AB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\adapters.py"", line 667, in send
+    resp = conn.urlopen(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 799, in urlopen
+    retries = retries.increment(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\retry.py"", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A25AB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_api.py"", line 14, in test_basic_invalid
+    r = requests.post(BASE + ""/calculate/basic"", json={""operation"": ""add"", ""x"": ""a"", ""y"": 3})
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\api.py"", line 115, in post
+    return request(""post"", url, data=data, json=json, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\api.py"", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\sessions.py"", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\sessions.py"", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\adapters.py"", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A25AB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+"
+test_financial_simple_interest (tests.test_api.TestCalculatorAPI),ERROR,unit,"Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 174, in _new_conn
+    conn = connection.create_connection(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\connection.py"", line 95, in create_connection
+    raise err
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\connection.py"", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 715, in urlopen
+    httplib_response = self._make_request(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1037, in _send_output
+    self.send(msg)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 975, in send
+    self.connect()
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 205, in connect
+    conn = self._new_conn()
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001EE61A251B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\adapters.py"", line 667, in send
+    resp = conn.urlopen(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 799, in urlopen
+    retries = retries.increment(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\retry.py"", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/finance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A251B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_api.py"", line 22, in test_financial_simple_interest
+    r = requests.post(BASE + ""/calculate/finance"", json={""operation"": ""simple_interest"", ""p"": 1000, ""r"": 5, ""t"": 2})
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\api.py"", line 115, in post
+    return request(""post"", url, data=data, json=json, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\api.py"", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\sessions.py"", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\sessions.py"", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\adapters.py"", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/finance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A251B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+"
+test_graphical_advanced_formula_safe (tests.test_api.TestCalculatorAPI),ERROR,unit,"Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 174, in _new_conn
+    conn = connection.create_connection(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\connection.py"", line 95, in create_connection
+    raise err
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\connection.py"", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 715, in urlopen
+    httplib_response = self._make_request(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1037, in _send_output
+    self.send(msg)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 975, in send
+    self.connect()
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 205, in connect
+    conn = self._new_conn()
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001EE61A250F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\adapters.py"", line 667, in send
+    resp = conn.urlopen(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 799, in urlopen
+    retries = retries.increment(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\retry.py"", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A250F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_api.py"", line 27, in test_graphical_advanced_formula_safe
+    r = requests.post(BASE + ""/calculate/graphical/plot"", json={""formula"": ""np.sin(x) + x**2""})
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\api.py"", line 115, in post
+    return request(""post"", url, data=data, json=json, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\api.py"", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\sessions.py"", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\sessions.py"", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\adapters.py"", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A250F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+"
+test_graphical_advanced_formula_unsafe (tests.test_api.TestCalculatorAPI),ERROR,unit,"Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 174, in _new_conn
+    conn = connection.create_connection(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\connection.py"", line 95, in create_connection
+    raise err
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\connection.py"", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 715, in urlopen
+    httplib_response = self._make_request(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1037, in _send_output
+    self.send(msg)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 975, in send
+    self.connect()
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 205, in connect
+    conn = self._new_conn()
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001EE61A259F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\adapters.py"", line 667, in send
+    resp = conn.urlopen(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 799, in urlopen
+    retries = retries.increment(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\retry.py"", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A259F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_api.py"", line 31, in test_graphical_advanced_formula_unsafe
+    r = requests.post(BASE + ""/calculate/graphical/plot"", json={""formula"": ""import os; os.system('rm -rf /')""})
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\api.py"", line 115, in post
+    return request(""post"", url, data=data, json=json, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\api.py"", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\sessions.py"", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\sessions.py"", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\adapters.py"", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A259F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+"
+test_planning_rate (tests.test_api.TestCalculatorAPI),ERROR,unit,"Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 174, in _new_conn
+    conn = connection.create_connection(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\connection.py"", line 95, in create_connection
+    raise err
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\connection.py"", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 715, in urlopen
+    httplib_response = self._make_request(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1037, in _send_output
+    self.send(msg)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 975, in send
+    self.connect()
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 205, in connect
+    conn = self._new_conn()
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001EE61A27A30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\adapters.py"", line 667, in send
+    resp = conn.urlopen(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 799, in urlopen
+    retries = retries.increment(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\retry.py"", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/rate (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A27A30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_api.py"", line 39, in test_planning_rate
+    r = requests.post(BASE + ""/api/planning/rate"", json={""pv"": 1000, ""pmt"": 88.85, ""n"": 12})
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\api.py"", line 115, in post
+    return request(""post"", url, data=data, json=json, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\api.py"", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\sessions.py"", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\sessions.py"", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\adapters.py"", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/rate (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A27A30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+"
+test_planning_sip (tests.test_api.TestCalculatorAPI),ERROR,unit,"Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 174, in _new_conn
+    conn = connection.create_connection(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\connection.py"", line 95, in create_connection
+    raise err
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\connection.py"", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 715, in urlopen
+    httplib_response = self._make_request(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1037, in _send_output
+    self.send(msg)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 975, in send
+    self.connect()
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 205, in connect
+    conn = self._new_conn()
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001EE61A24850>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\adapters.py"", line 667, in send
+    resp = conn.urlopen(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 799, in urlopen
+    retries = retries.increment(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\retry.py"", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/sip (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A24850>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_api.py"", line 35, in test_planning_sip
+    r = requests.post(BASE + ""/api/planning/sip"", json={""monthly_investment"": 1000, ""annual_rate"": 12, ""tenure_months"": 12})
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\api.py"", line 115, in post
+    return request(""post"", url, data=data, json=json, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\api.py"", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\sessions.py"", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\sessions.py"", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\adapters.py"", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/sip (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A24850>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+"
+test_scientific_power (tests.test_api.TestCalculatorAPI),ERROR,unit,"Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 174, in _new_conn
+    conn = connection.create_connection(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\connection.py"", line 95, in create_connection
+    raise err
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\connection.py"", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 715, in urlopen
+    httplib_response = self._make_request(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1037, in _send_output
+    self.send(msg)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 975, in send
+    self.connect()
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 205, in connect
+    conn = self._new_conn()
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001EE61A18100>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\adapters.py"", line 667, in send
+    resp = conn.urlopen(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 799, in urlopen
+    retries = retries.increment(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\retry.py"", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/scientific (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A18100>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_api.py"", line 17, in test_scientific_power
+    r = requests.post(BASE + ""/calculate/scientific"", json={""operation"": ""power"", ""x"": 2, ""y"": 8})
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\api.py"", line 115, in post
+    return request(""post"", url, data=data, json=json, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\api.py"", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\sessions.py"", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\sessions.py"", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\adapters.py"", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/scientific (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A18100>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+"
+test_test_results_pie_chart (tests.test_api.TestCalculatorAPI),ERROR,unit,"Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 174, in _new_conn
+    conn = connection.create_connection(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\connection.py"", line 95, in create_connection
+    raise err
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\connection.py"", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 715, in urlopen
+    httplib_response = self._make_request(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 1037, in _send_output
+    self.send(msg)
+  File ""C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\http\client.py"", line 975, in send
+    self.connect()
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 205, in connect
+    conn = self._new_conn()
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connection.py"", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001EE61A24160>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\adapters.py"", line 667, in send
+    resp = conn.urlopen(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\connectionpool.py"", line 799, in urlopen
+    retries = retries.increment(
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\urllib3\util\retry.py"", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /test_results/pie_chart (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A24160>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_api.py"", line 43, in test_test_results_pie_chart
+    r = requests.get(BASE + ""/test_results/pie_chart"")
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\api.py"", line 73, in get
+    return request(""get"", url, params=params, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\api.py"", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\sessions.py"", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\sessions.py"", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File ""C:\Users\RITESH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\adapters.py"", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /test_results/pie_chart (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A24160>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+"
+API POST /calculate/basic,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A24A30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+API POST /calculate/basic,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A27DF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+API POST /calculate/scientific,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/scientific (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A25960>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+API POST /calculate/finance,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/finance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A24F40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+API POST /calculate/graphical/plot,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A18790>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+API POST /calculate/graphical/plot,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A250F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+API POST /api/planning/sip,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/sip (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A257B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+API POST /api/planning/rate,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/rate (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A27E50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+API GET /test_results/pie_chart,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /test_results/pie_chart (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE61A26DD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"

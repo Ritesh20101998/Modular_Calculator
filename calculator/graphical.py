@@ -1,4 +1,8 @@
-# ...existing code from your graphical.py...
+"""
+Graphical Calculator Module
+- Plotting and visualization utilities
+- Uses numpy and matplotlib, logs all actions
+"""
 
 import logging
 logging.basicConfig(

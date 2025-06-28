@@ -5,10 +5,22 @@ test_floor_divide (tests.test_basic.TestBasicCalculator),PASS,unit,
 test_max_min_abs (tests.test_basic.TestBasicCalculator),PASS,unit,
 test_modulus (tests.test_basic.TestBasicCalculator),PASS,unit,
 test_multiply (tests.test_basic.TestBasicCalculator),PASS,unit,
-test_power (tests.test_basic.TestBasicCalculator),PASS,unit,
+test_power (tests.test_basic.TestBasicCalculator),ERROR,unit,"Traceback (most recent call last):
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_basic.py"", line 42, in test_power
+    self.assertEqual(basic.power(2, 10), 1024)
+AttributeError: module 'calculator.basic' has no attribute 'power'
+"
 test_subtract (tests.test_basic.TestBasicCalculator),PASS,unit,
-test_type_errors (tests.test_basic.TestBasicCalculator),PASS,unit,
-test_zero_and_negative_inputs (tests.test_basic.TestBasicCalculator),PASS,unit,
+test_type_errors (tests.test_basic.TestBasicCalculator),ERROR,unit,"Traceback (most recent call last):
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_basic.py"", line 71, in test_type_errors
+    basic.power('bar', 2)
+AttributeError: module 'calculator.basic' has no attribute 'power'
+"
+test_zero_and_negative_inputs (tests.test_basic.TestBasicCalculator),ERROR,unit,"Traceback (most recent call last):
+  File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\tests\test_basic.py"", line 56, in test_zero_and_negative_inputs
+    self.assertEqual(basic.power(-2, 3), -8)
+AttributeError: module 'calculator.basic' has no attribute 'power'
+"
 test_compound_interest (tests.test_financial.TestFinancialCalculator),PASS,unit,
 test_compound_interest_high_frequency (tests.test_financial.TestFinancialCalculator),PASS,unit,
 test_format_currency (tests.test_financial.TestFinancialCalculator),PASS,unit,
@@ -67,7 +79,7 @@ Traceback (most recent call last):
     self.sock = self._new_conn()
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\connection.py"", line 213, in _new_conn
     raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000274ADA938E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000015F2A196EC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
 
 The above exception was the direct cause of the following exception:
 
@@ -78,7 +90,7 @@ Traceback (most recent call last):
     retries = retries.increment(
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\util\retry.py"", line 519, in increment
     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274ADA938E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2A196EC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 
 During handling of the above exception, another exception occurred:
 
@@ -95,7 +107,7 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\requests\adapters.py"", line 700, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274ADA938E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2A196EC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 "
 test_basic_invalid (tests.test_api.TestCalculatorAPI),ERROR,unit,"Traceback (most recent call last):
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\connection.py"", line 198, in _new_conn
@@ -125,7 +137,7 @@ Traceback (most recent call last):
     self.sock = self._new_conn()
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\connection.py"", line 213, in _new_conn
     raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000274AF015960>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000015F2B6199F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
 
 The above exception was the direct cause of the following exception:
 
@@ -136,7 +148,7 @@ Traceback (most recent call last):
     retries = retries.increment(
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\util\retry.py"", line 519, in increment
     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AF015960>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B6199F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 
 During handling of the above exception, another exception occurred:
 
@@ -153,7 +165,7 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\requests\adapters.py"", line 700, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AF015960>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B6199F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 "
 test_financial_simple_interest (tests.test_api.TestCalculatorAPI),ERROR,unit,"Traceback (most recent call last):
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\connection.py"", line 198, in _new_conn
@@ -183,7 +195,7 @@ Traceback (most recent call last):
     self.sock = self._new_conn()
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\connection.py"", line 213, in _new_conn
     raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000274AD4D7310>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000015F2ADE6170>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
 
 The above exception was the direct cause of the following exception:
 
@@ -194,7 +206,7 @@ Traceback (most recent call last):
     retries = retries.increment(
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\util\retry.py"", line 519, in increment
     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/finance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AD4D7310>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/finance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2ADE6170>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 
 During handling of the above exception, another exception occurred:
 
@@ -211,7 +223,7 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\requests\adapters.py"", line 700, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/finance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AD4D7310>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/finance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2ADE6170>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 "
 test_graphical_advanced_formula_safe (tests.test_api.TestCalculatorAPI),ERROR,unit,"Traceback (most recent call last):
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\connection.py"", line 198, in _new_conn
@@ -241,7 +253,7 @@ Traceback (most recent call last):
     self.sock = self._new_conn()
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\connection.py"", line 213, in _new_conn
     raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000274AE85D6C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000015F2B659090>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
 
 The above exception was the direct cause of the following exception:
 
@@ -252,7 +264,7 @@ Traceback (most recent call last):
     retries = retries.increment(
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\util\retry.py"", line 519, in increment
     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AE85D6C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B659090>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 
 During handling of the above exception, another exception occurred:
 
@@ -269,7 +281,7 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\requests\adapters.py"", line 700, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AE85D6C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B659090>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 "
 test_graphical_advanced_formula_unsafe (tests.test_api.TestCalculatorAPI),ERROR,unit,"Traceback (most recent call last):
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\connection.py"", line 198, in _new_conn
@@ -299,7 +311,7 @@ Traceback (most recent call last):
     self.sock = self._new_conn()
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\connection.py"", line 213, in _new_conn
     raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000274AF016590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000015F2B658550>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
 
 The above exception was the direct cause of the following exception:
 
@@ -310,7 +322,7 @@ Traceback (most recent call last):
     retries = retries.increment(
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\util\retry.py"", line 519, in increment
     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AF016590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B658550>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 
 During handling of the above exception, another exception occurred:
 
@@ -327,7 +339,7 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\requests\adapters.py"", line 700, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AF016590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B658550>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 "
 test_planning_rate (tests.test_api.TestCalculatorAPI),ERROR,unit,"Traceback (most recent call last):
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\connection.py"", line 198, in _new_conn
@@ -357,7 +369,7 @@ Traceback (most recent call last):
     self.sock = self._new_conn()
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\connection.py"", line 213, in _new_conn
     raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000274AF017880>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000015F2B659CF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
 
 The above exception was the direct cause of the following exception:
 
@@ -368,7 +380,7 @@ Traceback (most recent call last):
     retries = retries.increment(
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\util\retry.py"", line 519, in increment
     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/rate (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AF017880>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/rate (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B659CF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 
 During handling of the above exception, another exception occurred:
 
@@ -385,7 +397,7 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\requests\adapters.py"", line 700, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/rate (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AF017880>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/rate (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B659CF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 "
 test_planning_sip (tests.test_api.TestCalculatorAPI),ERROR,unit,"Traceback (most recent call last):
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\connection.py"", line 198, in _new_conn
@@ -415,7 +427,7 @@ Traceback (most recent call last):
     self.sock = self._new_conn()
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\connection.py"", line 213, in _new_conn
     raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000274AF017190>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000015F2B65B130>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
 
 The above exception was the direct cause of the following exception:
 
@@ -426,7 +438,7 @@ Traceback (most recent call last):
     retries = retries.increment(
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\util\retry.py"", line 519, in increment
     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/sip (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AF017190>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/sip (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B65B130>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 
 During handling of the above exception, another exception occurred:
 
@@ -443,7 +455,7 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\requests\adapters.py"", line 700, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/sip (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AF017190>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/sip (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B65B130>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 "
 test_scientific_power (tests.test_api.TestCalculatorAPI),ERROR,unit,"Traceback (most recent call last):
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\connection.py"", line 198, in _new_conn
@@ -473,7 +485,7 @@ Traceback (most recent call last):
     self.sock = self._new_conn()
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\connection.py"", line 213, in _new_conn
     raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000274AD89A140>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000015F2CD0DCF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
 
 The above exception was the direct cause of the following exception:
 
@@ -484,7 +496,7 @@ Traceback (most recent call last):
     retries = retries.increment(
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\util\retry.py"", line 519, in increment
     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/scientific (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AD89A140>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/scientific (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2CD0DCF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 
 During handling of the above exception, another exception occurred:
 
@@ -501,7 +513,7 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\requests\adapters.py"", line 700, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/scientific (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AD89A140>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/scientific (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2CD0DCF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 "
 test_test_results_pie_chart (tests.test_api.TestCalculatorAPI),ERROR,unit,"Traceback (most recent call last):
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\connection.py"", line 198, in _new_conn
@@ -531,7 +543,7 @@ Traceback (most recent call last):
     self.sock = self._new_conn()
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\connection.py"", line 213, in _new_conn
     raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000274AD4D7D30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000015F2B65B760>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
 
 The above exception was the direct cause of the following exception:
 
@@ -542,7 +554,7 @@ Traceback (most recent call last):
     retries = retries.increment(
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\urllib3\util\retry.py"", line 519, in increment
     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /test_results/pie_chart (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AD4D7D30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /test_results/pie_chart (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B65B760>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 
 During handling of the above exception, another exception occurred:
 
@@ -559,14 +571,14 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File ""D:\Desktop\Simple Projects\Python\Modular_Calculator\myenv\lib\site-packages\requests\adapters.py"", line 700, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /test_results/pie_chart (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AD4D7D30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /test_results/pie_chart (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B65B760>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 "
-API POST /calculate/basic,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AF016E90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
-API POST /calculate/basic,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AF017E80>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
-API POST /calculate/scientific,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/scientific (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AF015900>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
-API POST /calculate/finance,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/finance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AF0158A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
-API POST /calculate/graphical/plot,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AD4D72B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
-API POST /calculate/graphical/plot,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AF015450>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
-API POST /api/planning/sip,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/sip (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AF017AF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
-API POST /api/planning/rate,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/rate (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AF0176A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
-API GET /test_results/pie_chart,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /test_results/pie_chart (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000274AF015E70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+API POST /calculate/basic,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B65A230>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+API POST /calculate/basic,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/basic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B659150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+API POST /calculate/scientific,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/scientific (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B658640>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+API POST /calculate/finance,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/finance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B65B850>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+API POST /calculate/graphical/plot,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F29AB2290>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+API POST /calculate/graphical/plot,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /calculate/graphical/plot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B658100>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+API POST /api/planning/sip,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/sip (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B659DB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+API POST /api/planning/rate,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/planning/rate (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B65A830>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+API GET /test_results/pie_chart,ERROR,api,"HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /test_results/pie_chart (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F2B65B760>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
